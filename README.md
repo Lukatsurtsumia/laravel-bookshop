@@ -8,7 +8,6 @@ This project demonstrates modern Laravel development including authentication, L
 # 🚀 Features
 
 ## User Features
-
 - New users receive **500 welcome bonus points**
 - Browse and search books by:
   - Title
@@ -40,7 +39,6 @@ Books can be searched and filtered dynamically for better user experience.
 
 ---
 ## User Experience
-
 When opening the website, users see:
 
 - A **3D animated book**
@@ -65,7 +63,6 @@ Users can:
 
 ---
 # 🛠 Admin Panel
-
 The admin controls the entire system.
 
 Admin features include:
@@ -100,7 +97,6 @@ All admin pages support:
 
 ---
 # 🏗 Architecture
-
 The project follows **clean Laravel architecture**:
 
 - Controllers
@@ -155,6 +151,22 @@ This project was built as a **portfolio project** to demonstrate:
 - Database design and relationships
 
 ---
+## Screenshots
+### Home Page
+![Home Page] (screenshots/Capture d'écran 2026-03-28 083911.png)
+             (screenshots/Capture d'écran 2026-04-05 204952.png)
+
+### Book Details
+![Book Details](screenshots/Capture d'écran 2026-04-05 205045.png)
+               (screenshots/Capture d'écran 2026-04-05 205101.png)
+               (screenshots/Capture d'écran 2026-04-05 205112.png)
+
+### Shopping Cart
+![Cart](screenshots/Capture d'écran 2026-04-05 205631.png)
+
+### Admin Panel
+![Admin](screenshots/Capture d'écran 2026-04-05 205150.png)
+         (screenshots/Capture d'écran 2026-04-05 205225.png)
 # 👨‍💻 Author
 
 Luka Tsurtsumia
