@@ -154,7 +154,7 @@ This project was built as a **portfolio project** to demonstrate:
 ## Screenshots
 ### Home Page
 ![Home Page] 
-*(screenshots/Capture d'écran 2026-03-28 083911.png)
+*(screenshots/Capture d'écran 2026-04-05 205015.png)
  *(screenshots/Capture d'écran 2026-04-05 204952.png)
 
 ### Book Details
