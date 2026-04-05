@@ -172,6 +172,33 @@ This project was built as a **portfolio project** to demonstrate:
 ![Admin]
 *(screenshots/Capture d'écran 2026-04-05 205150.png)
 *(screenshots/Capture d'écran 2026-04-05 205225.png)
+
+
+---------
+## Installation
+
+1. Clone the repository
+git clone https://github.com/Lukatsurtsumia/laravel-bookshop.git
+
+2. Go into the project directory
+cd your-project-name
+
+3. Install dependencies
+composer install
+
+4. Create environment file
+cp .env.example .env
+
+5. Generate application key
+php artisan key:generate
+
+6. Run migrations
+php artisan migrate
+
+7. Start the development server
+php artisan serve
+
+-----------
 # 👨‍💻 Author
 
 Luka Tsurtsumia
