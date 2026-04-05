@@ -154,24 +154,24 @@ This project was built as a **portfolio project** to demonstrate:
 ## Screenshots
 ### Home Page
 ![Home Page] 
-(screenshots/Capture d'écran 2026-03-28 083911.png)
- (screenshots/Capture d'écran 2026-04-05 204952.png)
+*(screenshots/Capture d'écran 2026-03-28 083911.png)
+ *(screenshots/Capture d'écran 2026-04-05 204952.png)
 
 ### Book Details
 ![Book Details]
-(screenshots/Capture d'écran 2026-04-05 205045.png)
-(screenshots/Capture d'écran 2026-04-05 205101.png)
-(screenshots/Capture d'écran 2026-04-05 205112.png)
+*(screenshots/Capture d'écran 2026-04-05 205045.png)
+*(screenshots/Capture d'écran 2026-04-05 205101.png)
+*(screenshots/Capture d'écran 2026-04-05 205112.png)
 
 ### Shopping Cart
 ![Cart]
-(screenshots/Capture d'écran 2026-04-05 205631.png)
-(screenshots/Capture d'écran 2026-04-05 213908.png)
+*(screenshots/Capture d'écran 2026-04-05 205631.png)
+*(screenshots/Capture d'écran 2026-04-05 213908.png)
 
 ### Admin Panel
 ![Admin]
-(screenshots/Capture d'écran 2026-04-05 205150.png)
-(screenshots/Capture d'écran 2026-04-05 205225.png)
+*(screenshots/Capture d'écran 2026-04-05 205150.png)
+*(screenshots/Capture d'écran 2026-04-05 205225.png)
 # 👨‍💻 Author
 
 Luka Tsurtsumia
