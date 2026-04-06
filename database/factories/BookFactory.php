@@ -1,6 +1,6 @@
 <?php
-
 namespace Database\Factories;
+
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -9,21 +9,16 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class BookFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
     public function definition(): array
     {
         return [
-            'image'=>null,
-            'title'=> fake()->sentence(3),
-            'author'=>fake()->name(),
-            'description'=>fake()->paragraph(),
-            'year'=>fake()->year(),
-            'price'=>fake()->randomFloat(2, 5, 100),
-            'user_id'=>User::inRandomOrder()->first()->id,
+            'image' => null,
+            'title' => $this->faker->sentence(3),
+            'author' => $this->faker->name(),
+            'description' => $this->faker->paragraph(),
+            'year' => $this->faker->year(),
+            'price' => $this->faker->randomFloat(2, 5, 100),
+            'user_id' => User::inRandomOrder()->first()->id,
         ];
     }
 }
