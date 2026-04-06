@@ -11,34 +11,35 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        // Create users FIRST
-        User::factory(10)->create();
+        $this->call(CategorySeeder::class);
 
-        // Create admin
-        User::factory()->create([
+        $categories = Category::all();
+
+        // create admin
+        $admin = User::create([
             'name' => 'Admin',
             'email' => 'admin@gmail.com',
             'password' => bcrypt('password'),
             'is_admin' => true
         ]);
 
-        // Run categories
-        $this->call(CategorySeeder::class);
+        // create books manually
+        for ($i = 1; $i <= 20; $i++) {
 
-        $categories = Category::all();
+            $book = Book::create([
+                'title' => 'Sample Book '.$i,
+                'author' => 'Author '.$i,
+                'description' => 'Example book description',
+                'year' => rand(2000,2024),
+                'price' => rand(10,100),
+                'quantity' => rand(1,20),
+                'image' => 'books/'.$i.'.jpg',
+                'user_id' => $admin->id
+            ]);
 
-        // Create books
-        Book::factory(20)
-            ->hasReviews(10)
-            ->create()
-            ->each(function ($book) use ($categories) {
-                $book->categories()->attach(
-                    $categories->random(rand(1,3))->pluck('id')
-                );
-
-                $book->update([
-                    'image' => 'books/' . rand(1,20) . '.jpg'
-                ]);
-            });
+            $book->categories()->attach(
+                $categories->random(rand(1,3))->pluck('id')
+            );
+        }
     }
 }
