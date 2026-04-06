@@ -25,4 +25,4 @@ RUN touch database/database.sqlite
 
 RUN chmod -R 777 storage bootstrap/cache database 
 
-EXPOSE 10000 CMD sh -c "php artisan config:clear && php artisan cache:clear && php artisan migrate:fresh --seed --force && php artisan serve --host=0.0.0.0 --port=10000" 
+CMD sh -c "php artisan config:clear && php artisan migrate --seed --force && php artisan serve --host=0.0.0.0 --port=10000"
