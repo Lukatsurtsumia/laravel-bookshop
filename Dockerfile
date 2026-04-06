@@ -24,7 +24,7 @@ RUN mkdir -p database
 RUN touch database/database.sqlite
 
 # permissions
-RUN chmod -R 775 storage bootstrap/cache
+RUN chmod -R 775 storage bootstrap/cache database
 
 EXPOSE 10000
 
