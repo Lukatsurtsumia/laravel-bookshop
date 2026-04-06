@@ -21,35 +21,34 @@ class DatabaseSeeder extends Seeder
      * Seed the application's database.
      */
     public function run(): void
-    {
-      User::factory(10)->create();
+{
+    // run fixed categories
+    $this->call(CategorySeeder::class);
 
-      //run fixed categories
-      $this->call(CategorySeeder::class);
-      //get all
-    $categories=Category::all();
+    $categories = Category::all();
 
-      Book::factory(20)
-            ->hasReviews(10)
-            ->create()
-            ->each(function($book) use ($categories){
+    Book::factory(20)
+        ->hasReviews(10)
+        ->create()
+        ->each(function ($book) use ($categories) {
             $book->categories()->attach(
-               $categories 
-               ->random(rand(1,3))
-               ->pluck('id')
-               
+                $categories
+                    ->random(rand(1,3))
+                    ->pluck('id')
             );
 
-         $book->update([
-            'image'=> 'books/' . rand(1,20). '.jpg'
+            $book->update([
+                'image' => 'books/' . rand(1,20) . '.jpg'
             ]);
-      });
- 
-        User::factory()->create([
-          'name'=>'Admin',
-          'email'=>'admin@gmail.com',
-          'password'=>bcrypt('password'),
-          'is_admin'=>true
-        ]);
-    }
+        });
+
+    // create admin user
+    User::factory()->create([
+        'name' => 'Admin',
+        'email' => 'admin@gmail.com',
+        'password' => bcrypt('password'),
+        'is_admin' => true
+    ]);
+}
+   
 }
