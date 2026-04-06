@@ -8,13 +8,15 @@
         "framework"
     ],
     "license": "MIT",
-    "require": {
-        "php": "^8.2",
-        "laravel/framework": "^12.0",
-        "laravel/sanctum": "^4.0",
-        "laravel/tinker": "^2.10.1",
-        "livewire/livewire": "^4.2"
-    },
+  "require" : { 
+    "php": "^8.2" , 
+    "laravel/framework": "^12.0" , 
+    "laravel/sanctum": "^4.0" , 
+    "laravel/tinker": "^2.10.1" , 
+    "livewire/livewire": "^4.2" , 
+    "fakerphp/faker": "^1.23" 
+}, 
+
     "require-dev": {
         "fakerphp/faker": "^1.23",
         "laravel/breeze": "^2.3",
