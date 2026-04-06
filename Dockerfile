@@ -7,15 +7,23 @@ RUN apt-get update && apt-get install -y \
     unzip \
     libzip-dev \
     zip \
-    curl
+    curl \
+    sqlite3 \
+    libsqlite3-dev
 
-RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install pdo pdo_mysql pdo_sqlite
 
 COPY . .
 
+# install composer
 RUN curl -sS https://getcomposer.org/installer | php
 RUN php composer.phar install --no-dev --optimize-autoloader
 
+# create sqlite database
+RUN mkdir -p database
+RUN touch database/database.sqlite
+
+# permissions
 RUN chmod -R 775 storage bootstrap/cache
 
 EXPOSE 10000
