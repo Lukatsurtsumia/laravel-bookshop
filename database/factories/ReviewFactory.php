@@ -17,8 +17,8 @@ class ReviewFactory extends Factory
 
         return [
             'user_id' => User::inRandomOrder()->first()->id,
-            'rating' => $this->faker->numberBetween(1, 5),
-            'comment' => $this->faker->paragraph(),
+            'rating' => fake()->numberBetween(1, 5),
+            'comment' => fake()->paragraph(),
             'created_at' => $createdAt,
             'updated_at' => $updatedAt,
         ];
