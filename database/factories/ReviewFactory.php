@@ -9,13 +9,13 @@ class ReviewFactory extends Factory
 {
     public function definition(): array
     {
-        $createdAt = $this->faker->dateTimeBetween('-10 years', 'now');
-        $updatedAt = $this->faker->dateTimeBetween($createdAt, 'now');
+        $createdAt = fake()->dateTimeBetween('-10 years', 'now');
+        $updatedAt = fake()->dateTimeBetween($createdAt, 'now');
 
         return [
-            'user_id' => User::inRandomOrder()->first()->id,
-            'rating' => $this->faker->numberBetween(1, 5),
-            'comment' => $this->faker->paragraph(),
+            'user_id' => User::inRandomOrder()->value('id'),
+            'rating' => fake()->numberBetween(1, 5),
+            'comment' => fake()->paragraph(),
             'created_at' => $createdAt,
             'updated_at' => $updatedAt,
         ];
