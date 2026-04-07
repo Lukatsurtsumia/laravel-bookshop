@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
 
             $book = Book::create([
                 'title' => rtrim(fake()->sentence(3), '.'),
-                'author' => 'author' => fake()->firstName().' '.fake()->lastName(),
+                'author' =>fake()->firstName().' '.fake()->lastName(),
                 'description' => 'Example book description',
                 'year' => rand(2000,2024),
                 'price' => rand(10,100) + 0.99,
