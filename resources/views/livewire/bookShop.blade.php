@@ -86,7 +86,7 @@
 
                                     <!-- PRICE -->
                                     <span class="text-amber-400 font-semibold text-sm">
-                                        ${{ $book->price }}
+                                        ${{ number_format($book->price,2) }}
                                     </span>
 
                                     <!-- CART ICON -->
