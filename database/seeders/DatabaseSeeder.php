@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Book;
 use App\Models\User;
+use App\Models\Review;
 use App\Models\Category;
 use Illuminate\Database\Seeder;
 
@@ -40,6 +41,10 @@ class DatabaseSeeder extends Seeder
             $book->categories()->attach(
                 $categories->random(rand(1,3))->pluck('id')
             );
+             // create reviews with factory
+            Review::factory(rand(1,5))->create([
+                'book_id' => $book->id
+            ]);
         }
     }
 }
