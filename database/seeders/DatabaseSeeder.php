@@ -31,8 +31,8 @@ class DatabaseSeeder extends Seeder
         for ($i = 1; $i <= 20; $i++) {
 
             $book = Book::create([
-                'title' => 'Sample Book '.$i,
-                'author' => 'Author '.$i,
+                'title' => rtrim(fake()->sentence(3), '.'),
+                'author' => 'author' => fake()->firstName().' '.fake()->lastName(),
                 'description' => 'Example book description',
                 'year' => rand(2000,2024),
                 'price' => rand(10,100) + 0.99,
