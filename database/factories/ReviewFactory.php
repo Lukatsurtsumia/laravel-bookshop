@@ -12,8 +12,8 @@ class ReviewFactory extends Factory
 {
     public function definition(): array
     {
-        $createdAt = $this->faker->dateTimeBetween('-10 years', 'now');
-        $updatedAt = $this->faker->dateTimeBetween($createdAt, 'now');
+        $createdAt = fake()->dateTimeBetween('-10 years', 'now');
+        $updatedAt = fake()->dateTimeBetween($createdAt, 'now');
 
         return [
             'user_id' => User::inRandomOrder()->first()->id,
