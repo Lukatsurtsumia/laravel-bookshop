@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install -y \
     zip \
     curl \
     sqlite3 \
-    libsqlite3-dev
+    libsqlite3-dev \
+    libonig-dev
 
 RUN docker-php-ext-install pdo pdo_mysql pdo_sqlite mbstring bcmath zip
 
