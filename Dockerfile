@@ -19,13 +19,16 @@ COPY . .
 # install composer
 RUN curl -sS https://getcomposer.org/installer | php
 
-# env file
+# create env
 RUN cp .env.example .env
 
 # install dependencies
-RUN php -d memory_limit=-1 composer.phar install --no-dev --optimize-autoloader
+RUN php -d memory_limit=-1 composer.phar install \
+    --no-dev \
+    --optimize-autoloader \
+    --prefer-dist
 
-# sqlite
+# sqlite database
 RUN mkdir -p database
 RUN touch database/database.sqlite
 
@@ -33,6 +36,7 @@ RUN touch database/database.sqlite
 RUN chmod -R 777 storage bootstrap/cache database
 
 CMD sh -c "\
+php artisan key:generate && \
 php artisan config:clear && \
 php artisan cache:clear && \
 php artisan storage:link || true && \
