@@ -16,23 +16,17 @@ RUN docker-php-ext-install pdo pdo_mysql pdo_sqlite mbstring bcmath zip
 
 COPY . .
 
-# install composer
 RUN curl -sS https://getcomposer.org/installer | php
 
-# create env
-RUN cp .env.example .env
+RUN if [ ! -f .env ]; then cp .env.example .env; fi
 
-# install dependencies
-RUN php -d memory_limit=-1 composer.phar install \
-    --no-dev \
+RUN php -d memory_limit=-1 composer.phar update \
     --optimize-autoloader \
     --prefer-dist
 
-# sqlite database
 RUN mkdir -p database
 RUN touch database/database.sqlite
 
-# permissions
 RUN chmod -R 777 storage bootstrap/cache database
 
 CMD sh -c "\
