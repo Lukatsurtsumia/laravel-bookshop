@@ -2,20 +2,22 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\User;
 
 class ReviewFactory extends Factory
 {
     public function definition(): array
     {
-        $createdAt = fake()->dateTimeBetween('-10 years', 'now');
-        $updatedAt = fake()->dateTimeBetween($createdAt, 'now');
+        $faker = \Faker\Factory::create();
+
+        $createdAt = $faker->dateTimeBetween('-10 years', 'now');
+        $updatedAt = $faker->dateTimeBetween($createdAt, 'now');
 
         return [
             'user_id' => User::inRandomOrder()->value('id'),
-            'rating' => fake()->numberBetween(1, 5),
-            'comment' => fake()->paragraph(),
+            'rating' => $faker->numberBetween(1,5),
+            'comment' => $faker->paragraph(),
             'created_at' => $createdAt,
             'updated_at' => $updatedAt,
         ];
