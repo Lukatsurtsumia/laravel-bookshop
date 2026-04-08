@@ -20,7 +20,7 @@ RUN curl -sS https://getcomposer.org/installer | php
 
 RUN if [ ! -f .env ]; then cp .env.example .env; fi
 
-RUN php -d memory_limit=-1 composer.phar install \
+ RUN php -d memory_limit=-1 composer.phar update \
     --no-dev \
     --optimize-autoloader \
     --prefer-dist
