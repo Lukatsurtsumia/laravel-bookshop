@@ -20,7 +20,8 @@ RUN curl -sS https://getcomposer.org/installer | php
 
 RUN if [ ! -f .env ]; then cp .env.example .env; fi
 
-RUN php -d memory_limit=-1 composer.phar update \
+RUN php -d memory_limit=-1 composer.phar install \
+    --no-dev \
     --optimize-autoloader \
     --prefer-dist
 
@@ -35,4 +36,4 @@ php artisan config:clear && \
 php artisan cache:clear && \
 php artisan storage:link || true && \
 php artisan migrate --seed --force && \
-php artisan serve --host=0.0.0.0 --port=10000"
+php artisan serve --host=0.0.0.0 --port=$PORT"
