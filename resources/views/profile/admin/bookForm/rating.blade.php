@@ -1,4 +1,4 @@
-<div class="flex items-center gap-1 max-w-full overflow-hidden">
+<div class="flex flex-row-reverse items-center gap-1 max-w-full overflow-hidden">
 
 <input
 type="radio"
