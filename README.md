@@ -203,5 +203,10 @@ php artisan serve
 
 Luka Tsurtsumia
 
+Demo version:
+https://laravel-bookshop.onrender.com
+
 GitHub:  
 https://github.com/lukatsurtsumia
+
+
