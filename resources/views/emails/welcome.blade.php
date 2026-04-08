@@ -1,6 +1,6 @@
 <div style="text-align:center; font-family: Arial, sans-serif;">
 
-<img src="{{ asset('images/cover.jpg') }}" width="200">
+ 
 
 <h2>Welcome {{ $user->name }}!</h2>
 
