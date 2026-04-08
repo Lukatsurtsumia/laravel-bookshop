@@ -261,12 +261,13 @@ placeholder="Write your thoughts..."></textarea>
 <p class="text-xs text-red-600">{{ $message }}</p>
 @enderror
 </div>
-
+@if(auth()->user())
 <button type="submit" 
 class="mt-4 bg-amber-500 hover:bg-amber-400 text-black
 px-5 py-2 rounded-md text-sm transition">
 Post Review
 </button>
+@endif
 </form>
 </div>
  
