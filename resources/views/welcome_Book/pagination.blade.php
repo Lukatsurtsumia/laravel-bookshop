@@ -1,7 +1,7 @@
 @if ($books->hasPages())
 <div class="mt-24 flex justify-center">
 
-    <nav class="relative flex items-center gap-2
+    <nav class="relative flex items-center gap-4
                 px-8 py-4 rounded-full
                 bg-gradient-to-r from-white/5 via-white/10 to-white/5
                 backdrop-blur-2xl
